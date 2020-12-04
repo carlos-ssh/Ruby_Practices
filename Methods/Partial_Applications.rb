@@ -1,7 +1,6 @@
-
 combination = -> (n) do
   ->(r) do
-      n + r
+      (n-r + 1..n).inject(:*) / (1..r).inject(:*)
   end
 end
 n = gets.to_i
